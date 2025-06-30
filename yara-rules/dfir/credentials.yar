@@ -135,7 +135,7 @@ rule Slack_API_Tokens {
         $slack_legacy_token = /xoxs-[A-Za-z0-9\-_]{32}/
         $slack_webhook_url = /https:\/\/hooks\.slack\.com\/services\/[A-Za-z0-9\-_]+\/[A-Za-z0-9\-_]+\/[A-Za-z0-9\-_]+/
     condition:
-        any of ($slack_bot_token, $slack_user_token, $slack_app_token, $slack_legacy_token, $slack_webhook_url)
+        any of them
 }
 
 rule GitHub_Tokens {
